@@ -250,7 +250,48 @@ controller.bulkUpdate = (req, res, next) => {
   }
 };
 
-controller.deleteUser = (req, res, next) => {};
+controller.deleteUser = (req, res, next) => {
+    const { _id } = req.body;
+    const userID = typeof _id === "string" ? _id : false;
+    if (userID) {
+        data.read("users", "users", (err, users) => {
+        if (!err && Array.isArray(users) && users.length > 0) {
+            const user = users.find((user) => user._id === userID);
+            if (user) {
+            data.delete("users", "users", userID, (err) => {
+                if (!err) {
+                res.status(200).json({
+                    success: true,
+                    message: "User deleted successfully",
+                });
+                } else {
+                res.status(500).json({
+                    success: false,
+                    message: "Internal server error. User not deleted",
+                });
+                }
+            });
+            } else {
+            res.status(404).json({
+                success: false,
+                message: "This user is not found",
+            });
+            }
+        } else {
+            res.status(500).json({
+            success: false,
+            message: "Internal server error. No users found",
+            });
+        }
+        });
+    } else {
+        res.status(400).json({
+        success: false,
+        message: "Invalid request body",
+        });
+    }
+
+};
 
 //export module
 module.exports = controller;
