@@ -210,7 +210,6 @@ controller.bulkUpdate = (req, res, next) => {
   if (
     Array.isArray(req.body) &&
     req.body.length > 0 &&
-    req.body.every((user) => user && typeof user === "object") &&
     req.body.every(
       (user) =>
         (user && typeof user === "object" && user["_id"] && user["name"]) ||
