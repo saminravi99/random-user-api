@@ -91,7 +91,7 @@
 
 ---
 
-### DELETE API for deleting an User with selected ID : [ https://random-user-api-saminravi99.onrender.com/api/v1/user/update]( https://random-user-api-saminravi99.onrender.com/api/v1/user/update)
+### DELETE API for deleting an User with selected ID : [ https://random-user-api-saminravi99.onrender.com/api/v1/user/update]( https://random-user-api-saminravi99.onrender.com/api/v1/user/delete)
 
 *The body for deleting an existing user will be like:*
 `{
