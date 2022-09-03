@@ -15,6 +15,13 @@ app.use(express.json());
 //handle application errors
 app.use(errorHandler)
 
+app.get("/", (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: "Welcome to Random User Api",
+    });
+})
+
 // dynamic api routes
 app.use("/api/v1", usersRoutes );
 
