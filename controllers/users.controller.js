@@ -1,9 +1,6 @@
 //dependencies
 
 const data = require("../lib/data");
-const { parseJsonToObject } = require("../utils/parseJSON");
-const photoValidator = require("../utils/photoValidator");
-const uniqid = require("uniqid");
 const generateID = require("../utils/generateID");
 
 //module scaffolding
