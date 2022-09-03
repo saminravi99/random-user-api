@@ -9,8 +9,9 @@ const usersRoutes = express.Router();
 usersRoutes.route("/user/random").get(getRandomUser);
 usersRoutes.route("/user/all").get(getAllUsers);
 usersRoutes.route("/user/save").post(postUser);
-usersRoutes.route("/user/:id").patch(updateUser);
+usersRoutes.route("/user/update").patch(updateUser);
 usersRoutes.route("/user/bulk-update").patch(bulkUpdate);
+usersRoutes.route("/user/delete")
 
 //export module
 module.exports = usersRoutes;
