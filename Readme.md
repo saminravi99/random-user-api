@@ -20,7 +20,7 @@
 
 
 ---
-### POST API for Creating a User : [ hhttps://random-user-api-saminravi99.onrender.com/api/v1/user/save]( https://random-user-api-saminravi99.onrender.com/api/v1/user/save)
+### POST API for Creating a User : [ https://random-user-api-saminravi99.onrender.com/api/v1/user/save]( https://random-user-api-saminravi99.onrender.com/api/v1/user/save)
 
 *The body for Creating a new user will be like:*
 `{
